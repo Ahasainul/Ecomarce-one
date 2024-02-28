@@ -14,6 +14,7 @@ const router = createBrowserRouter(
      <Route path="Contacts/" element={<Contract/>}/>
      <Route path="Proudct" element={<Proudct/>}/>
      <Route path="login/" element={<Login/>}/>
+     <Route path="counter/" element={<Counter/>}/>
 
     <Route path="*" element={<Errore/>}/>
     </Route>
@@ -33,6 +34,7 @@ import Contract from "./pages/Contract";
 import Proudct from "./pages/Proudct";
 import Errore from "./pages/Errore";
 import Login from "./pages/Login";
+import Counter from "./components/Counter";
 
 function App() {
 
