@@ -15,6 +15,7 @@ const router = createBrowserRouter(
      <Route path="Proudct" element={<Proudct/>}/>
      <Route path="login/" element={<Login/>}/>
      <Route path="counter/" element={<Counter/>}/>
+     <Route path="singup/" element={<Singup/>}/>
 
     <Route path="*" element={<Errore/>}/>
     </Route>
@@ -22,19 +23,18 @@ const router = createBrowserRouter(
 );
 
 import './App.css'
-import Naver from "./layots/Naver";
+
 import Routelayots from "./layots/Routelayots";
-import Banner from "./layots/Banner";
-import BannerTow from "./layots/BannerTow";
+
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
-import Container from "./components/Container";
 import Contract from "./pages/Contract";
 import Proudct from "./pages/Proudct";
 import Errore from "./pages/Errore";
 import Login from "./pages/Login";
 import Counter from "./components/Counter";
+import Singup from "./pages/Singup";
 
 function App() {
 

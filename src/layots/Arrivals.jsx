@@ -39,30 +39,24 @@ const Arrivals = () => {
 
         <Slider {...settings} >
 
-          <div className="mr-5">
            <div className="">
-           <CardBox ProcdtImg={cat} btnName={'New'}  alt={'cat.png'} />
+           <CardBox ProcdtImg={cat} className="className={'w-[95%]'}" btnName={'New'}  alt={'cat.png'} />
            </div>
 
-          </div>
-          <div className="mr-5">
-            <CardBox  ProcdtImg={image} btnName={'New'} alt={'cat.png'} />
+          
+          <div className="">
+            <CardBox  ProcdtImg={image}  className="className={'w-[95%]'}"  btnName={'New'} alt={'cat.png'} />
 
           </div>
-          <div className="mr-5">
-            <CardBox ProcdtImg={buskat} btnName={'New'} alt={'cat.png'} />
+          <div className="">
+            <CardBox ProcdtImg={buskat}  className="className={'w-[95%]'}" btnName={'New'} alt={'cat.png'} />
 
           </div>
-          <div className="mr-5">
-            <CardBox ProcdtImg={clok} btnName={'New'} alt={'cat.png'} />
+          <div className="">
+            <CardBox ProcdtImg={clok}   className="className={'w-[95%] !im'}" btnName={'New'} alt={'cat.png'} />
           </div>
+          
         </Slider>
-
-
-
-
-
-
 
       </Container>
 
