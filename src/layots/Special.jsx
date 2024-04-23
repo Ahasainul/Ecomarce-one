@@ -14,7 +14,7 @@ const Special = () => {
     <Container className={'py-10'}>
         <Hadding className={'font-dm font-bold text-5xl pb-8'} hedText={'Special Offers'}/>
         <div className="">
-          <Flex className={'gap-8'}>
+          <Flex className={'gap-5'}>
           <CardBox  ProcdtImg={rockcap} alt={'rockcap.png'} btnName={'New'}/>
           <CardBox  ProcdtImg={lamps} alt={'lamps.png'} btnName={'New'}/>
           <CardBox  ProcdtImg={hedphone} alt={'headphon.png'} btnName={'New'}/>

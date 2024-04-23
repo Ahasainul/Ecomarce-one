@@ -26,8 +26,8 @@ const Arrivals = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow:<PrevArros/>,
-    prevArrow:<NextArow/>,
+    nextArrow: <PrevArros />,
+    prevArrow: <NextArow />,
 
   };
   return (
@@ -39,23 +39,23 @@ const Arrivals = () => {
 
         <Slider {...settings} >
 
-           <div className="">
-           <CardBox ProcdtImg={cat} className="className={'w-[95%]'}" btnName={'New'}  alt={'cat.png'} />
-           </div>
-
-          
           <div className="">
-            <CardBox  ProcdtImg={image}  className="className={'w-[95%]'}"  btnName={'New'} alt={'cat.png'} />
-
+            <CardBox ProcdtImg={cat} className="className={'w-[95%]'}" btnName={'New'} alt={'cat.png'} />
           </div>
+
+
           <div className="">
-            <CardBox ProcdtImg={buskat}  className="className={'w-[95%]'}" btnName={'New'} alt={'cat.png'} />
+            <CardBox ProcdtImg={image} className="className={'w-[95%]'}" btnName={'New'} alt={'cat.png'} />
 
           </div>
           <div className="">
-            <CardBox ProcdtImg={clok}   className="className={'w-[95%] !im'}" btnName={'New'} alt={'cat.png'} />
+            <CardBox ProcdtImg={buskat} className="className={'w-[95%]'}" btnName={'New'} alt={'cat.png'} />
+
           </div>
-          
+          <div className="">
+            <CardBox ProcdtImg={clok} className="className={'w-[95%] !im'}" btnName={'New'} alt={'cat.png'} />
+          </div>
+
         </Slider>
 
       </Container>

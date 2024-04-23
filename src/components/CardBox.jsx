@@ -33,7 +33,7 @@ const CardBox = ({ ProcdtImg, alt, btnName, className }) => {
 
           </div>
         </div>
-        <div className="">
+        <div className="p-2">
           <Flex className='justify-between py-3'>
             <Hadding className='text-xl font-dm font-bold' hedText={'Basic Crew Neck Tee'} />
             <Subhadding className='text-base' subText={'$44.00'} />

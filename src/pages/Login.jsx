@@ -17,7 +17,7 @@ const Login = () => {
                     <Subhadding className={'text-base w-[620px] leading-7 mt-32 pb-14 '} subText={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
                 </div>
                 <div className="">
-                    <Hadding className={'font-bold text-4xl font-dm mt-16'} hedText={'Returning Customer'} />
+                    <Hadding className={'font-bold text-4xl font-dm mt-12'} hedText={'Returning Customer'} />
                 </div>
                 <Flex className={'gap-10'}>
                     <div className="w-[500px] border-b-2 pb-5 mt-12">
