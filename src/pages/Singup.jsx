@@ -138,17 +138,17 @@ const Singup = () => {
                     <Subhadding className={'text-sm '} subText={'I have read and agree to the Privacy Policy'} />
                 </div>
                 <div className=" pt-10 flex items-center pb-10 gap-x-5">
-                 
+
                     <Subhadding className={'text-sm '} subText={'Subscribe Newsletter'} />
                     <div className="flex gap-x-4 items-center">
-                    <input type="checkbox" /> <Subhadding subText={'Yes'}/>
-                    <input type="checkbox" /> <Subhadding subText={'No'}/>
+                        <input type="checkbox" /> <Subhadding subText={'Yes'} />
+                        <input type="checkbox" /> <Subhadding subText={'No'} />
                     </div>
                 </div>
-<div className="pb-10">
-<Btn btnName={'Log in'} className={'px-20 '}/>
+                <div className="pb-10">
+                    <Btn btnName={'Log in'} className={'px-20 '} />
 
-</div>
+                </div>
 
 
 

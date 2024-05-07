@@ -17,12 +17,22 @@ import lamps from '../assets/lamps.png'
 import buskat from '../assets/buskat.png'
 import sunglass from '../assets/sunglass.png'
 import pute from '../assets/pute.png'
+import { useSelector } from 'react-redux';
 
 const Shop = () => {
+    let data = useSelector((state) => state.bradcome.currentname);
+
+
     return (
         <>
             <Container className={'py-20'}>
                 <Hadding className={'text-5xl font-bold font-dm '} hedText={'Products'} />
+            {/* bradcome  */}
+            <Flex className={'items-center '}>
+            {data} <h4 className='mt-1'>/</h4>
+            <p className='first-letter:uppercase pt-2'>{window.location.pathname.replace("/", "").replace("/", "")}</p>
+            </Flex>
+  {/* bradcome  */}
                 <div className="flex pt-24">
                     <div className="w-[20%]">
                         <div className="">
