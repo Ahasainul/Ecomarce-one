@@ -11,7 +11,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaCartShopping, FaRepeat } from "react-icons/fa6";
 
 
-const CardBox = ({ ProcdtImg, alt, btnName, className }) => {
+const CardBox = ({ ProcdtImg, alt, btnName, className ,onAddcart}) => {
   return (
     <>
       <div className="mt-10 group ">
@@ -21,11 +21,12 @@ const CardBox = ({ ProcdtImg, alt, btnName, className }) => {
           <div className="h-40 bg-white absolute bottom-0 left-0 w-full group-hover:visible invisible">
 
             <div className="pr-5  ">
-              <Flex className='items-center justify-end gap-4 pt-6 '>  <Subhadding className=' hover:text-black hover:font-bold' subText='Add to Wish List' />
+              <Flex className='items-center justify-end gap-4 pt-6 '>  <button className=' hover:text-black hover:font-bold' >Add to Wish List</button>
                 <FaHeart /></Flex>
-              <Flex className='items-center justify-end gap-4 py-4 '>  <Subhadding className=' hover:text-black hover:font-bold' subText='Compare' />
+         
+              <Flex className='items-center justify-end gap-4 py-4 '>  <button className=' hover:text-black hover:font-bold' >Compare</button>
                 <FaRepeat /></Flex>
-              <Flex className='items-center justify-end gap-4  '>  <Subhadding className=' hover:text-black hover:font-bold' subText='Add to Cart' />
+              <Flex className='items-center justify-end gap-4  '>  <button className=' hover:text-black hover:font-bold' >Add to Cart</button>
                 <FaCartShopping /></Flex>
             </div>
 
@@ -37,6 +38,7 @@ const CardBox = ({ ProcdtImg, alt, btnName, className }) => {
           <Flex className='justify-between py-3'>
             <Hadding className='text-xl font-dm font-bold' hedText={'Basic Crew Neck Tee'} />
             <Subhadding className='text-base' subText={'$44.00'} />
+
           </Flex>
           <Subhadding className={'font-dm font-semibold'} subText={'black'} />
         </div>

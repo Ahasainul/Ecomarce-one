@@ -7,12 +7,29 @@ import Image from '../components/Image'
 import big from '../assets/big.png'
 import bigtow from '../assets/bigtow.png'
 import Subhadding from '../components/Subhadding'
+import useBreadcrumbs from "use-react-router-breadcrumbs";
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
+    const breadcrumbs = useBreadcrumbs();
     return (
         <>
             <Container className={'py-10'}>
-                <Hadding className={'text-5xl font-bold font-dm  py-12'} hedText={'About'} />
+                <Hadding className={'text-5xl font-bold font-dm pb-2'} hedText={'About'} />
+                
+                {breadcrumbs.map(({ match, breadcrumb }, index) => (
+                    <NavLink key={match.pathname} to={match.pathname}>
+                        <span className='mr-1 '>
+                            {breadcrumb}
+                        </span>
+
+                        <span className='mr-1'>
+                            {breadcrumbs.length - 1 !== index && '/'}
+
+                        </span>
+                    </NavLink>
+                ))}
+
 
                 <Flex className={'gap-10 py-10'}>
                     <div className="">

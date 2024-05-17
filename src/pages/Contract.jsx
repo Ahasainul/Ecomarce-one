@@ -4,13 +4,30 @@ import Hadding from '../components/Hadding'
 import Subhadding from '../components/Subhadding'
 import Inpout from '../components/Inpout'
 import Btn from '../components/Btn'
+import useBreadcrumbs from "use-react-router-breadcrumbs";
+import { NavLink } from 'react-router-dom';
 
 const Contract = () => {
+    const breadcrumbs = useBreadcrumbs();
     return (
         <>
             <Container className={'py-28'} >
 
-                <Hadding className={'text-5xl font-bold font-dm '} hedText={'Contacts'} />
+                <Hadding className={'text-5xl font-bold font-dm pb-2'} hedText={'Contacts'} />
+                
+                {breadcrumbs.map(({ match, breadcrumb }, index) => (
+                    <NavLink key={match.pathname} to={match.pathname}>
+                        <span className='mr-1 '>
+                            {breadcrumb}
+                        </span>
+
+                        <span className='mr-1'>
+                            {breadcrumbs.length - 1 !== index && '/'}
+
+                        </span>
+                    </NavLink>
+                ))}
+
                 <div className="w-1/2">
                     <Hadding className={'text-3xl font-bold font-dm pt-28'} hedText={'Fill up a Form'} />
                     <div className=" border-b py-5">

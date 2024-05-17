@@ -11,28 +11,60 @@ import { BiSolidUpArrow } from "react-icons/bi";
 import puta from '../assets/pota.png'
 import cat from '../assets/cat.png'
 import bag from '../assets/bag.png'
-import bagtow from '../assets/bagtow.png'
-import cup from '../assets/cup.png'
-import lamps from '../assets/lamps.png'
-import buskat from '../assets/buskat.png'
-import sunglass from '../assets/sunglass.png'
-import pute from '../assets/pute.png'
+import { useEffect, useState } from "react"
+
 import { useSelector } from 'react-redux';
+import useBreadcrumbs from "use-react-router-breadcrumbs";
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import Proadct from '../components/Proadct';
 
 const Shop = () => {
-    let data = useSelector((state) => state.bradcome.currentname);
+    // let data = useSelector((state) => state.bradcome.currentname);
+    const breadcrumbs = useBreadcrumbs();
+    const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(false);
+    const faceData = async () => {
+        try {
+            setLoading(true)
+            const { data } = await axios.get('https://dummyjson.com/products?limit=16');
+            setProducts(data);
+        } catch (error) {
 
+        } finally {
+            setLoading(false)
+        }
+    };
+    console.log(products);
+    useEffect(() => {
+        faceData();
+    }, []);
 
     return (
         <>
             <Container className={'py-20'}>
                 <Hadding className={'text-5xl font-bold font-dm '} hedText={'Products'} />
-            {/* bradcome  */}
-            <Flex className={'items-center '}>
-            {data} <h4 className='mt-1'>/</h4>
-            <p className='first-letter:uppercase pt-2'>{window.location.pathname.replace("/", "").replace("/", "")}</p>
-            </Flex>
-  {/* bradcome  */}
+                {/* bradcome  */}
+                {/* <Flex className={'items-center '}>
+                    {data} <h4 className='mt-1'>/</h4>
+                    <p className='first-letter:uppercase pt-2'>{window.location.pathname.replace("/", "").replace("/", "")}</p>
+                </Flex> */}
+                {/* bradcome  */}
+
+                {breadcrumbs.map(({ match, breadcrumb }, index) => (
+                    <NavLink key={match.pathname} to={match.pathname}>
+                        <span className='mr-1 '>
+                            {breadcrumb}
+                        </span>
+
+                        <span className='mr-1'>
+                            {breadcrumbs.length - 1 !== index && '/'}
+
+                        </span>
+                    </NavLink>
+                ))}
+
+
                 <div className="flex pt-24">
                     <div className="w-[20%]">
                         <div className="">
@@ -124,7 +156,7 @@ const Shop = () => {
                                 </Flex>
                             </div>
                             <div className="">
-                                <Flex className={'gap-5 items-center pb-5 border-b'}>  
+                                <Flex className={'gap-5 items-center pb-5 border-b'}>
                                     <Subhadding className={'font-dm text-base '} subText={'Brand 1'} />
                                 </Flex>
                             </div>
@@ -161,7 +193,7 @@ const Shop = () => {
                                 </Flex>
                             </div>
                             <div className="">
-                                <Flex className={'gap-5 items-center pb-5 border-b'}>  
+                                <Flex className={'gap-5 items-center pb-5 border-b'}>
                                     <Subhadding className={'font-dm text-base '} subText={'$0.00 - $9.99'} />
                                 </Flex>
                             </div>
@@ -226,53 +258,17 @@ const Shop = () => {
                                     </select>
                                 </div>
                             </div>
+                        </div>
+                        {/* start */}
+                        <div className="grid grid-cols-4  gap-6 pt-5">
+                        {loading
+                            ? 'loding.....'
+                            : products &&
+                            products.products.map((products) => <Proadct  products={products} />)}
 
+                        </div>
+                        
 
-                        </div>
-                        <div className="flex  gap-5">
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={puta} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={cat} className={'w-full'} btnName={'-10%'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={bag} className={'w-full '} btnName={'New '} alt={'puta.png'} />
-                            </div>
-                        </div>
-                        <div className="flex  gap-5">
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={bagtow} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={cup} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={buskat} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                        </div>
-                        <div className="flex  gap-5">
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={lamps} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={sunglass} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={puta} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                        </div>
-                        <div className="flex  gap-5">
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={puta} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={bag} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                            <div className="w-1/3">
-                                <CardBox ProcdtImg={pute} className={'w-full'} btnName={'New'} alt={'puta.png'} />
-                            </div>
-                        </div>
 
                     </div>
                 </div>
