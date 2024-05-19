@@ -9,9 +9,13 @@ import Subhadding from '../components/Subhadding'
 import Flex from '../components/Flex'
 import { FaHeart } from "react-icons/fa";
 import { FaCartShopping, FaRepeat } from "react-icons/fa6";
+import Proadct from './Proadct'
 
 
-const CardBox = ({ ProcdtImg, alt, btnName, className ,onAddcart}) => {
+const CardBox = ({ ProcdtImg, alt, btnName, className } ) => {
+  const handelcard =(products)=>{
+  
+}
   return (
     <>
       <div className="mt-10 group ">
@@ -26,7 +30,7 @@ const CardBox = ({ ProcdtImg, alt, btnName, className ,onAddcart}) => {
          
               <Flex className='items-center justify-end gap-4 py-4 '>  <button className=' hover:text-black hover:font-bold' >Compare</button>
                 <FaRepeat /></Flex>
-              <Flex className='items-center justify-end gap-4  '>  <button className=' hover:text-black hover:font-bold' >Add to Cart</button>
+              <Flex className='items-center justify-end gap-4  '>  <button className=' hover:text-black hover:font-bold' onClick={handelcard} >Add to Cart</button>
                 <FaCartShopping /></Flex>
             </div>
 

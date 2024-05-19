@@ -9,12 +9,14 @@ import Icons from '../iconss/Icons'
 import Hadding from '../components/Hadding'
 import { FaSearch, FaUser, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 import blank from '../assets/blnk.png'
+import { useSelector } from 'react-redux'
 
 
 
 
 
 const Naver = () => {
+  const cartt = useSelector(state => state.cart)
 
   let DropReef = useRef(null)
 
@@ -27,7 +29,7 @@ const Naver = () => {
       DropReef.current.style.display = 'block'
     }
   };
-  
+
   let handelclicktow = () => {
     if (DropReeff.current.style.display == 'block') {
       DropReeff.current.style.display = 'none'
@@ -106,25 +108,26 @@ const Naver = () => {
 
               <div className="relative" onClick={handelclicktow}>
                 <FaShoppingCart className='cursor-pointer' />
+                {cartt}
                 <div className=" absolute top-8 left-[-300px] w-[357px] shadow-2xl   hidden  " ref={DropReeff}>
-                 <div className="bg-[#F5F5F3] py-5 px-5">
-                 <Flex className={'gap-5 items-center'}>
-                    <Image src={blank}/>
-                    <div className="">
-                      <p className='font-bold'>Black Smart Watch</p>
-                      <h2 className='font-bold pt-2'>$440</h2>
-                    </div>
-                  </Flex>
-                 </div>
-                 <div className="bg-white py-5 px-5">
-                  <p>Subtotal: <span className='font-bold'> $44.00</span></p>
+                  <div className="bg-[#F5F5F3] py-5 px-5">
+                    <Flex className={'gap-5 items-center'}>
+                      <Image src={blank} />
+                      <div className="">
+                        <p className='font-bold'>Black Smart Watch</p>
+                        <h2 className='font-bold pt-2'>$440</h2>
+                      </div>
+                    </Flex>
+                  </div>
+                  <div className="bg-white py-5 px-5">
+                    <p>Subtotal: <span className='font-bold'> $44.00</span></p>
 
-                  <Flex className={'gap-4'}>
-                    <button className='px-8 py-3 hover:text-white hover:bg-black text-black border-black border font-semibold mt-5'>View Cart</button>
-                    <button className='px-8 py-3  hover:text-white hover:bg-black text-black border-black border font-semibold mt-5'>Checkout</button>
-                  </Flex>
-                 </div>
-                 
+                    <Flex className={'gap-4'}>
+                      <button className='px-8 py-3 hover:text-white hover:bg-black text-black border-black border font-semibold mt-5'>View Cart</button>
+                      <button className='px-8 py-3  hover:text-white hover:bg-black text-black border-black border font-semibold mt-5'>Checkout</button>
+                    </Flex>
+                  </div>
+
                 </div>
 
 
