@@ -9,4 +9,4 @@ export const store = configureStore({
     bradcome:bradcomSlice,
     carts : cartSlice,
   },
-})
+});

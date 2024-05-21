@@ -47,7 +47,7 @@ const Shop = () => {
                 {/* bradcome  */}
                 {/* <Flex className={'items-center '}>
                     {data} <h4 className='mt-1'>/</h4>
-                    <p className='first-letter:uppercase pt-2'>{window.location.pathname.replace("/", "").replace("/", "")}</p>
+                    <p className='pt-2 first-letter:uppercase'>{window.location.pathname.replace("/", "").replace("/", "")}</p>
                 </Flex> */}
                 {/* bradcome  */}
 
@@ -68,7 +68,7 @@ const Shop = () => {
                 <div className="flex pt-24">
                     <div className="w-[20%]">
                         <div className="">
-                            <Hadding className='text-xl pt-10 font-bold pb-20' hedText={'Shop by Category'} />
+                            <Hadding className='pt-10 pb-20 text-xl font-bold' hedText={'Shop by Category'} />
                             <div className="">
                                 <Flex className={'justify-between items-center pb-5 border-b'}>
                                     <Subhadding className={'font-dm text-base '} subText={'Category 1'} />
@@ -104,8 +104,8 @@ const Shop = () => {
                             </div>
 
                         </div>
-                        <div className=" mt-12">
-                            <div className=" pb-20">
+                        <div className="mt-12 ">
+                            <div className="pb-20 ">
                                 <Flex className={'justify-between items-center  '}>
                                     <Hadding className='text-xl font-bold' hedText={'Shop by Color'} />
                                     <BiSolidUpArrow />
@@ -113,7 +113,7 @@ const Shop = () => {
                             </div>
                             <div className="">
                                 <Flex className={'gap-5 items-center pb-5 border-b'}>
-                                    <div className="w-3 h-3 rounded-full bg-black" ></div>
+                                    <div className="w-3 h-3 bg-black rounded-full" ></div>
                                     <Subhadding className={'font-dm text-base '} subText={'Color 1 '} />
 
 
@@ -121,35 +121,35 @@ const Shop = () => {
                             </div>
                             <div className="">
                                 <Flex className={' gap-5 items-center pt-5 pb-5 border-b'}>
-                                    <div className="w-3 h-3 rounded-full bg-blue-500" ></div>
+                                    <div className="w-3 h-3 bg-blue-500 rounded-full" ></div>
                                     <Subhadding className={'font-dm text-base '} subText={'Color 1 '} />
 
                                 </Flex>
                             </div>
                             <div className="">
                                 <Flex className={' gap-5 items-center  pt-5 pb-5 border-b'}>
-                                    <div className="w-3 h-3 rounded-full bg-green-700" ></div>
+                                    <div className="w-3 h-3 bg-green-700 rounded-full" ></div>
                                     <Subhadding className={'font-dm text-base '} subText={'Color 1 '} />
                                 </Flex>
                             </div>
                             <div className="">
                                 <Flex className={'items-center gap-5 pt-5 pb-5 border-b'}>
-                                    <div className="w-3 h-3 rounded-full bg-red-700" ></div>
+                                    <div className="w-3 h-3 bg-red-700 rounded-full" ></div>
                                     <Subhadding className={'font-dm text-base '} subText={'Color 1 '} />
 
                                 </Flex>
                             </div>
                             <div className="">
                                 <Flex className={'gap-5 items-center pt-5 pb-5 border-b'}>
-                                    <div className="w-3 h-3 rounded-full bg-yellow-600" ></div>
+                                    <div className="w-3 h-3 bg-yellow-600 rounded-full" ></div>
                                     <Subhadding className={'font-dm text-base '} subText={'Color 1 '} />
 
                                 </Flex>
                             </div>
 
                         </div>
-                        <div className=" mt-12">
-                            <div className=" pb-20">
+                        <div className="mt-12 ">
+                            <div className="pb-20 ">
                                 <Flex className={'justify-between items-center  '}>
                                     <Hadding className='text-xl font-bold' hedText={'Shop by Brand'} />
                                     <BiSolidUpArrow />
@@ -185,8 +185,8 @@ const Shop = () => {
                                 </Flex>
                             </div>
                         </div>
-                        <div className=" mt-12">
-                            <div className=" pb-20">
+                        <div className="mt-12 ">
+                            <div className="pb-20 ">
                                 <Flex className={'justify-between items-center  '}>
                                     <Hadding className='text-xl font-bold' hedText={'Shop by Price'} />
                                     <BiSolidUpArrow />
@@ -235,10 +235,10 @@ const Shop = () => {
                             </Flex >
 
                             <div className="flex">
-                                <div className="items-center gap-3  flex">
+                                <div className="flex items-center gap-3">
                                     <Subhadding className={'text-base text-ash'} subText={'Sort by:'} />
 
-                                    <select className='w-40 text-ash border px-4 py-2 '>
+                                    <select className='w-40 px-4 py-2 border text-ash '>
                                         <option value=""  > Featured</option>
                                         <option value=""  > one</option>
                                         <option value=""  > tow</option>
@@ -246,10 +246,10 @@ const Shop = () => {
                                         <option value=""  > four</option>
                                     </select>
                                 </div>
-                                <div className="items-center gap-3 ml-9  flex">
+                                <div className="flex items-center gap-3 ml-9">
                                     <Subhadding className={'text-base text-ash'} subText={'Sort by:'} />
 
-                                    <select className='w-28 text-ash border px-2 py-2 '>
+                                    <select className='px-2 py-2 border w-28 text-ash '>
                                         <option value=""  > 30</option>
                                         <option value=""  > one</option>
                                         <option value=""  > tow</option>
@@ -260,11 +260,11 @@ const Shop = () => {
                             </div>
                         </div>
                         {/* start */}
-                        <div className="grid grid-cols-4  gap-6 pt-5">
+                        <div className="grid grid-cols-4 gap-6 pt-5">
                         {loading
                             ? 'loding.....'
                             : products &&
-                            products.products.map((products) => <Proadct  products={products} />)}
+                            products.products.map((el) => <Proadct  products={el} />)}
 
                         </div>
                         
